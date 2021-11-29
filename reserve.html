@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/default.date.css">
+    <link rel="stylesheet" href="css/default.time.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+
+    <!-- jqueryを使う -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- datepicker -->
+    <script src="picker.js"></script>
+    <script src="picker.date.js"></script>
+    <script src="picker.time.js"></script>
+    <script src="legacy.js"></script>
+
+
+
+    <title>ご予約</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header-menu"></div>
+        <!-- ▼▼ヘッダーロゴ▼▼ -->
+        <div id="header-rogo"><a href="#"></a><img id="rogo" src="img/IMG_3977.PNG"></div>
+
+        <!-- ▼▼ハンバーガーメニュー▼▼ -->
+        <div id="hamburger">
+            <img id="icon" src="img/menu.png" alt="menu">
+        </div>
+
+        <!-- ハンバーガーメニュー終わり -->
+
+        <!-- ▼▼ハンバーガーメニューのリスト▼▼ -->
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="reserve.html">Reserve</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="map.html">access</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- ハンバーガーメニューのリスト終わり -->
+
+        <!-- PCヘッダー リスト終わり -->
+    </header>
+
+    <section class="section">
+        <div class="section__block section__block--scoped">
+            <h3 class="page-title">ご予約</h3>
+            <fieldset class="fieldset_area">
+                <div class="fieldset__wrapper">
+                    <label>予約日</label><br>
+                    <input id="date" class="fieldset__input js__datepicker" type="text"
+                        placeholder="Try me&hellip;"><br><br>
+                    <label>予約時間</label><br>
+                    <input id="time" class="fieldset__input js__datepicker" type="text"
+                        placeholder="Try me&hellip;"><br><br>
+                    <button id="submit" class="fieldset__button button button--small">予約</button>
+                </div>
+                <div id="result"></div> <!-- ボタン押下の結果を表示する -->
+            </fieldset>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="wrapper">
+            <p><small>&copy; 2021 LaLa</small></p>
+        </div>
+
+
+    </footer>
+
+</body>
+<script>
+    'use strict'
+    $(function () {
+        $('#date').pickadate();
+    });
+
+    $(function () {
+        $('#time').pickatime();
+    });
+
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<script src="script.js"></script>
+<script src="reserve.js"></script>
+<script src="langg-ja.js"></script>
+
+</html>
